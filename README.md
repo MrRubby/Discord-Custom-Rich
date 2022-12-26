@@ -41,36 +41,49 @@ In order to customize, you need to replace the statement "Your description Here.
 The code below can be found in src/index.js 
 
 ```js
-const RPC = require('discord-rpc');
-const client = new RPC.Client({ transport: 'ipc' });
+const clientId =  '901972599259668500';
+const DiscordRpc = require('discord-rpc');
+const RPC = new DiscordRpc.Client({transport: 'ipc'});
 
-let activity = {
-    details: "Your description Here.",
-    assets: {
-        large_image: "logo2",
-        large_text: "Your logo's name Here.",
-        small_image: "logo1",
-        small_text: "Your logo's name Here.",
-    },
-    buttons: [
-        {
-            "label": "Button name Here.",
-            "url": "Button URL Here."
-        },
-    ],
-    timestamps: { start: Date.now() },
-    instance: true,
-};
+DiscordRpc.register(clientId);
 
-client.on('ready', async () => {
-    client.request("SET_ACTIVITY", { pid: process.pid, activity: activity });
-    console.log("Client Ready.");
-});
-client.on('connected', async () => {
-    console.log("RPC Connected.");
-});
+async function setActivity() {
+    if (!RPC) return;
+    RPC.setActivity({
+        details: "Your description Here.",
+        state: 'Your detail Here.',
+        startTimestamp: Date.now(),
+        largeImageKey: 'logo1',
+        largeImageText: "Your logo's name Here.",
+        smallImageKey: 'logo2',
+        smallImageText: 'Your logo's name Here.',
+        instance: false,
+        buttons: [
+            {
+                label: 'Button name Here.',
+                url:'Button URL Here.'
+            },
+            {
+                label: 'Button name Here.',
+                url:'Button URL Here.'
+            }
+        ]
 
-client.login({ clientId: "Your Application's ID Here." });
+    })
+}
+
+RPC.on('ready', async () => {
+    setActivity();
+
+    /*setInterval(() => {
+        setActivity();
+    }, 15* 1000);*/
+})
+
+RPC.login({ clientId }).catch(err => console.error(err));
+
+
+console.log("[START] Discord RPC with Server Count started!")
 ```
 <br />
 
