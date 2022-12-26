@@ -74,10 +74,6 @@ async function setActivity() {
 
 RPC.on('ready', async () => {
     setActivity();
-
-    /*setInterval(() => {
-        setActivity();
-    }, 15* 1000);*/
 })
 
 RPC.login({ clientId }).catch(err => console.error(err));
