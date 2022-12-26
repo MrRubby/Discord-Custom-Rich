@@ -80,23 +80,13 @@ In order to get the Application ID, you need to login to [Discord Developer Port
 After creating a new application, name it what you want.
 > **Note:** The application's name will be in your status like: *Playing* ***Application Name***.
 
-After naming make sure to copy the Application ID and paste it in the place of "Your Application's ID Here." in src/index.js.
+After naming make sure to copy the Application ID and paste it in the place of "Your Application's ID Here." in index.js.
 
 After that, go to the 'Rich Presence' tab on the left navbar. [(Screenshot)](https://forum.cfx.re/uploads/default/original/3X/b/c/bca411d7b51bf613247873d39194255605e3e688.png)
 
 Inside 'Rich Presence' tab, scroll down to 'RICH PRESENCE ASSETS' [(Screenshot)](https://forum.cfx.re/uploads/default/original/3X/c/a/cae8666cda59131cdb35a32e6802c4c31d9af5d6.png) and add any Image there (could be your logo). After adding, make sure to note down the Image's name u add (you can also change the image's name after uploading).
 
-After uploading the logo, click on save and return back to src/index.js and replace "logo2" and "logo1" with the logo name you have added in the Portal.
+After uploading the logo, click on save and return back to app.js and replace "logo2" and "logo1" with the logo name you have added in the Portal.
 
 # 
-# Last step
-The Setup is now completed, to  run the RPC, double click on the `start.bat` file inside the main folder. After clicking it, it will show `Done.` and automatically close the Command Prompt. 
-
-You can also run it by copy-pasting the following command in Command Prompt,
-
-```coffeescript
-pm2 start ./src/index.js
-```
-> **Note**: Run the above command only inside the main folder. Not in the folder named 'src'.
-
 ### Hurray! The setup is done and the RPC must be running on your profile, if it dosent, create a new issue in this repository and we will guide you!
