@@ -41,7 +41,7 @@ In order to customize, you need to replace the statement "Your description Here.
 The code below can be found in src/index.js 
 
 ```js
-const clientId =  '901972599259668500';
+const clientId =  'ClientID';
 const DiscordRpc = require('discord-rpc');
 const RPC = new DiscordRpc.Client({transport: 'ipc'});
 
