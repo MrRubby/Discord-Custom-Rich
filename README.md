@@ -1,4 +1,4 @@
-<p align="center">(https://raw.githubusercontent.com/MrRubby/Discord-Custom-Rich/master/Screenshot.png)</p>
+<h1 align="center"> ![Screenshot](https://raw.githubusercontent.com/MrRubby/Discord-Custom-Rich/master/Screenshot.png) </h1>
 
 # 
 
