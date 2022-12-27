@@ -1,3 +1,7 @@
+![Screenshot](https://raw.githubusercontent.com/MrRubby/Discord-Custom-Rich/master/Screenshot.png)
+
+# 
+
 <h1 align="center">Discord Custom Rich Presence</h1>
 
 <p align="center">Discord Custom Rich Presence is a powerfull <a href="https://nodejs.org/en/">Node.js</a> module that allows you to easily set up a customized Rich Presence for Discord. Everything is customizable, and everything is done to simplify your work without limiting you!</p>
